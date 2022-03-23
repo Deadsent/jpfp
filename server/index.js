@@ -11,7 +11,6 @@ app.get('/api/campuses', async(req, res, next) => {
     }
 })
 
-
 app.get("/api/students", async (req, res, next) => {
   try {
     const students = await Students.findAll();
