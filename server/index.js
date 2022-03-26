@@ -4,18 +4,44 @@ const {app, Campuses, Students }= require('./app');
 app.get('/api/campuses', async(req, res, next) => {
     try {
         const campuses = await Campuses.findAll()
-        console.log(campuses, "campuses log")
         res.send(campuses)
     } catch (error) {
         next(error)
     }
 })
 
+app.delete('/api/campuses/:id', async (req, res, next) => {
+  try {
+    console.log(req.params, "req log")
+    const toDelete = req.params.id
+    console.log(toDelete, "delete log")
+    await Campuses.destroy({where:{
+      id: toDelete
+    }});
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get("/api/students", async (req, res, next) => {
   try {
     const students = await Students.findAll();
-    console.log(students, "campuses log");
     res.send(students);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.delete("/api/students/:id", async (req, res, next) => {
+  try {
+    console.log(req.params, "req log");
+    const toDelete = req.params.id;
+    console.log(toDelete, "delete log");
+    await Students.destroy({
+      where: {
+        id: toDelete,
+      },
+    });
   } catch (error) {
     next(error);
   }

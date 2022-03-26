@@ -59,7 +59,6 @@ const syncDB = async () => {
   try {
     await sequelize.sync({force: true})
 
-    await Campuses.create({ name: "Strixhaven" })
     await Campuses.create({ name: "Lorehold" });
     await Campuses.create({ name: "Prismari" });
     await Campuses.create({ name: "Quandrix" });
