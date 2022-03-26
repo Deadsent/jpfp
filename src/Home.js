@@ -7,6 +7,7 @@ const Home = () => {
     return (
       <div className="home-class">
         <Link to="/students">Students</Link>
+        <br />
         <Link to="/campuses">Campuses</Link>
       </div>
     );

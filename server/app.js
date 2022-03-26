@@ -65,7 +65,7 @@ const syncDB = async () => {
     await Campuses.create({ name: "Witherbloom" });
     await Campuses.create({ name: "Silverquill" });
 
-    await Students.create({ nameFirst: "Extus", nameLast: "Narr" });
+    await Students.create({ nameFirst: "Extus", nameLast: "Narr" , email: "extus.narr@gmail.com", gpa: 2.5});
     await Students.create({ nameFirst: "Cadoras", nameLast: "Damellawar" });
     await Students.create({ nameFirst: "Arlo", nameLast: "Wickel" });
     await Students.create({ nameFirst: "Killian", nameLast: "Lu" });

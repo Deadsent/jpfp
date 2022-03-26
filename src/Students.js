@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import SingleStudent from "./SingleStudent";
 
 const Students = ({ students, setStudents }) => {
   async function deleteStudents(id) {
@@ -19,7 +21,9 @@ const Students = ({ students, setStudents }) => {
         {students.map((student) => {
           return (
             <li key={student.id}>
-              {student.nameLast}, {student.nameFirst}
+              <Link to={`/students/${student.id}`}>
+                <SingleStudent student={student} />
+              </Link>
               <button
                 type="submit"
                 onClick={() => {
