@@ -12,6 +12,8 @@ const SingleCampusPage = ({ campuses }) => {
     return (
       <div>
           <h1>Strixhaven Campus of {campus.name}</h1>
+          <h2>{campus.address}</h2>
+          <h3>{campus.motto}</h3>
       </div>
     );
   } else {

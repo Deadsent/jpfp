@@ -3,14 +3,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-
-    return (
-      <div className="home-class">
+  return (
+    <div className="home-class">
+      <h3>
         <Link to="/students">Students</Link>
-        <br />
+      </h3>
+      <h3>
         <Link to="/campuses">Campuses</Link>
-      </div>
-    );
-  }
+      </h3>
+    </div>
+  );
+};
 
 export default Home;

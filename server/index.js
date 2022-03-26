@@ -22,9 +22,7 @@ app.get("/api/campuses/:id", async (req, res, next) => {
 
 app.delete('/api/campuses/:id', async (req, res, next) => {
   try {
-    console.log(req.params, "req log")
     const toDelete = req.params.id
-    console.log(toDelete, "delete log")
     await Campuses.destroy({where:{
       id: toDelete
     }});
@@ -54,9 +52,7 @@ app.get("/api/students/:id", async (req, res, next) => {
 
 app.delete("/api/students/:id", async (req, res, next) => {
   try {
-    console.log(req.params, "req log");
     const toDelete = req.params.id;
-    console.log(toDelete, "delete log");
     await Students.destroy({
       where: {
         id: toDelete,

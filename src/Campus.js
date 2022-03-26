@@ -16,7 +16,6 @@ const Campus = ({ campuses, setCampuses }) => {
     <div>
       <ul>
         {campuses.map((campus) => {
-          console.log(campus, "campus log");
           return (
             <li key={campus.id}>
               <Link to={`/campuses/${campus.id}`}>

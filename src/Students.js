@@ -6,9 +6,7 @@ import SingleStudent from "./SingleStudent";
 const Students = ({ students, setStudents }) => {
   async function deleteStudents(id) {
     try {
-      console.log(id, "id log");
       const { data } = await axios.delete(`/api/students/${id}`);
-      console.log(data, "data log");
       setStudents(data);
     } catch (error) {
       throw error;

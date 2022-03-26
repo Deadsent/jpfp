@@ -18,13 +18,11 @@ const App = () => {
 
   const fetchCampuses = async () => {
     const { data } = await axios.get("/api/campuses");
-    console.log(data, "data log");
     setCampuses(data);
   };
 
   const fetchStudents = async () => {
     const { data } = await axios.get("/api/students");
-    console.log(data, "data log");
     setStudents(data);
   };
 
